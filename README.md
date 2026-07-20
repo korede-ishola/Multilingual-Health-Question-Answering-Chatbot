@@ -24,7 +24,7 @@ Final validation combined score: **0.2225** (ROUGE-1 × 0.37 + ROUGE-L × 0.37)
 
 ### Model
 `google/mt5-base` — a multilingual encoder-decoder transformer pretrained on 101 languages (mC4 corpus), covering all four target African languages. Chosen because:
-- Encoder-decoder architecture is correct for open-domain QA generation (unlike encoder-only models like BERT which cannot generate sequences)
+- Encoder-decoder architecture is the right architecture for open-domain QA generation (unlike encoder-only models like BERT which cannot generate sequences)
 - Native multilingual coverage without needing per-language translation pipelines
 - Feasible on a free-tier T4 GPU (580M parameters)
 
