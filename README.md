@@ -62,11 +62,11 @@ This conditions the model's output language on the input prefix, preventing cros
 ## Repo structure
 
 ```
-├── datasets/
+├── Datasets/
 │   ├── Train.csv          # training set
     ├── Val.csv            # validation set
 │   └── Test.csv           # test set
-├── notebooks/
+├── Notebooks/
 │   ├── main.ipynb          # training notebook
 │   └── inference.ipynb     # inference + full val set evaluation
 ├── requirements.txt
