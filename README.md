@@ -1,8 +1,6 @@
 # Multilingual Health QA — Low-Resource African Languages
 
-Fine-tuning `google/mt5-base` to answer maternal, sexual and reproductive health (MSRH) questions across 8 language-country subsets covering English (Uganda, Ghana, Ethiopia, Kenya), Akan, Luganda, Swahili and Amharic.
-
-Built for the [Zindi Multilingual Health Question Answering in Low-Resource African Languages Challenge](https://zindi.africa/competitions/multilingual-health-question-answering-in-low-resource-african-languages-challenge).
+Fine-tuning `google/mt5-base` to answer maternal, sexual and reproductive health (MSRH) questions across 7 language-country subsets covering English (Uganda, Ghana, Ethiopia, Kenya), Akan, Luganda, and Swahili.
 
 ---
 
@@ -17,7 +15,6 @@ Built for the [Zindi Multilingual Health Question Answering in Low-Resource Afri
 | Swa_Ken | Swahili (Kenya) | 0.319 | 0.223 |
 | Eng_Ken | English (Kenya) | 0.276 | 0.191 |
 | Lug_Uga | Luganda (Uganda) | 0.188 | 0.140 |
-| Amh_Eth | Amharic (Ethiopia) | 0.031 | 0.031 |
 
 Final validation combined score: **0.2225** (ROUGE-1 × 0.37 + ROUGE-L × 0.37)
 
@@ -65,8 +62,12 @@ This conditions the model's output language on the input prefix, preventing cros
 ## Repo structure
 
 ```
+├── datasets/
+│   ├── Train.csv          # training set
+    ├── Val.csv            # validation set
+│   └── Test.csv           # test set
 ├── notebooks/
-│   ├── main.ipynb          # training notebook (runs on Colab/Kaggle)
+│   ├── main.ipynb          # training notebook
 │   └── inference.ipynb     # inference + full val set evaluation
 ├── requirements.txt
 └── README.md
@@ -99,7 +100,7 @@ Open `notebooks/inference.ipynb`, point `CKPT_DIR` at your saved checkpoint, and
 
 ## Hardware
 - GPU: NVIDIA T4 (15GB VRAM) — Google Colab free tier
-- Training time: ~5–6 hours for 6 epochs on the full augmented dataset
+- Training time: ~6 hours for 6 epochs on the full augmented dataset
 
 ## Dependencies
 See `requirements.txt`. All packages are free and open-source.
