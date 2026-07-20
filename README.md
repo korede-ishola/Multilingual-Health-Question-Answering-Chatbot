@@ -42,8 +42,8 @@ This conditions the model's output language on the input prefix, preventing cros
 
 **Low-resource augmentation** — `Amh_Eth` (1,845 rows), `Swa_Ken` (2,070), and `Eng_Ken` (2,080) are duplicated during training to balance against `Eng_Uga` (7,624 rows). Over-duplication (3×+) on Amharic was found to hurt precision, so 1× is used.
 
-**Memory-efficient training** — running on a free Colab/Kaggle T4 (15GB VRAM) required:
-- Adafactor optimizer (replaces Adam, saves ~40% memory)
+**Memory-efficient training** — ran on a free Colab T4 (15GB VRAM):
+- Adafactor optimizer
 - Gradient checkpointing
 - `MAX_TARGET_LENGTH = 128`, `MAX_INPUT_LENGTH = 128`
 - Batch size 8, gradient accumulation 4 (effective batch = 32)
@@ -82,7 +82,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Add data
-Place `Train.csv`, `Val.csv`, and `Test.csv` in the working directory (available from the Zindi competition page).
+Place `Train.csv`, `Val.csv`, and `Test.csv` in the working directory.
 
 ### 3. Train
 Open `notebooks/main.ipynb` and run all cells top to bottom.
@@ -93,12 +93,12 @@ trainer.train(resume_from_checkpoint="/content/drive/MyDrive/mt5_health_qa/check
 ```
 
 ### 4. Inference
-Open `notebooks/inference.ipynb`, point `CKPT_DIR` at your saved checkpoint, and run all cells. Outputs `submission.csv` in the Zindi format.
+Open `notebooks/inference.ipynb`, point `CKPT_DIR` at your saved checkpoint, and run all cells. Outputs `submission.csv`.
 
 ---
 
 ## Hardware
-- GPU: NVIDIA T4 (15GB VRAM) — Google Colab free tier or Kaggle
+- GPU: NVIDIA T4 (15GB VRAM) — Google Colab free tier
 - Training time: ~5–6 hours for 6 epochs on the full augmented dataset
 
 ## Dependencies
