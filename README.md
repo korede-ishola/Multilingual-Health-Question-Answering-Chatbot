@@ -1,4 +1,4 @@
-# Multilingual Health QA — Low-Resource African Languages
+# Multilingual Health Question-Answering Chatbot for Low-Resource African Languages
 
 Fine-tuning `google/mt5-base` to answer maternal, sexual and reproductive health (MSRH) questions across 7 language-country subsets covering English (Uganda, Ghana, Ethiopia, Kenya), Akan, Luganda, and Swahili.
 
