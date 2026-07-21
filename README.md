@@ -16,7 +16,7 @@ Fine-tuning `google/mt5-base` to answer maternal, sexual and reproductive health
 | Eng_Ken | English (Kenya) | 0.276 | 0.191 |
 | Lug_Uga | Luganda (Uganda) | 0.188 | 0.140 |
 
-Final validation combined score: **0.2225** (ROUGE-1 × 0.37 + ROUGE-L × 0.37)
+Final validation combined score: **0.3008** (ROUGE-1 × 0.50 + ROUGE-L × 0.50)
 
 ---
 
